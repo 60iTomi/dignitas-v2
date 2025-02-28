@@ -1,19 +1,123 @@
+:root {
+    --primary-colour: #031b11;
+    --secondary-colour: #23c869;
+}
+
 body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: #a63deaff;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+.colour-bar {
+    background-color: var(--secondary-colour);
+    height:60vh
+}
+
+.colour-bar h1 {
+    color: var(--primary-colour);
+    font-size: 2em;
+    padding-left: 5vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 1000;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 1vh;
+    padding-right: 5vh;
+}
+
+#menuOpen {
+    font-size: 2em; 
+} 
 
 .logo {
     display: block;
-    margin: 0 auto;
-    width: 50%;
+    width: auto;
+    height: 3.4em;
+    padding-top: 2vh;
+    margin-bottom: 3vh;
+    fill: var(--primary-colour) !important;
 }
 
-.body-container h1 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 2em;
+.body-container {
+    color: white;
+    font-family: "Inter", sans-serif;
+    min-height: 40vh;
+    background-color: black;
+}
+
+.body-subcontainer {
+    padding: 0;
+    height: auto;
+}
+.body-subcontainer h2 {
+    font-weight: 600;
+    padding-top: 5vh;
+    padding-left: 5vh;
+    font-size: 1.5em;
     margin-top: 0;
+}
+
+.body-subcontainer p {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.body-container .body-subcontainer .funsies {
+    padding-left: 0 !important;
+}
+
+.body-subcontainer p.funsies {
+    text-align: center;
+    max-width: 80vw;
+    margin-left: auto; margin-right: auto;
+    display: block;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.body-subcontainer span.funsies {
+    padding-top: 5vh;
+    display: block;
+    font-size: 3em;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.body-subcontainer h2.funsies {
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.colour-bar button {
+    color: var(--secondary-colour);
+    background-color: var(--primary-colour) !important;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    padding: 2vh 3vh 2vh 3vh !important;
+    border: 0.8vh solid var(--primary-colour);
+    border-radius: 5vh;
+    margin-top: 5vh;
+    margin-left: auto; margin-right: auto;
+    display: block;
+    font-size: 1em;
+    padding: 1vh;
+    transition-duration: 0.5s;
+}
+
+.colour-bar button:hover {
+    padding-left: 5vh !important; padding-right: 5vh !important;
 }
