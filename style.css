@@ -19,7 +19,7 @@ body {
 
 .colour-bar h1 {
     color: var(--primary-colour);
-    font-size: 2em;
+    font-size: 5vh;
     padding-left: 5vh;
     margin-top: 0;
     margin-bottom: 0;
@@ -38,13 +38,13 @@ body {
 }
 
 #menuOpen {
-    font-size: 2em; 
+    font-size: 5vh; 
 } 
 
 .logo {
     display: block;
     width: auto;
-    height: 3.4em;
+    height: 8.6vh;
     padding-top: 2vh;
     margin-bottom: 3vh;
     fill: var(--primary-colour) !important;
@@ -65,14 +65,14 @@ body {
     font-weight: 600;
     padding-top: 5vh;
     padding-left: 5vh;
-    font-size: 1.5em;
+    font-size: 4vh;
     margin-top: 0;
 }
 
 .body-subcontainer p {
     padding-left: 5vh;
     padding-right: 5vh;
-    font-size: 1em;
+    font-size: 3vh;
     font-weight: 400;
 }
 
@@ -92,7 +92,7 @@ body {
 .body-subcontainer span.funsies {
     padding-top: 5vh;
     display: block;
-    font-size: 3em;
+    font-size: 5vh;
     font-weight: 1000;
     text-align: center;
 }
@@ -113,7 +113,7 @@ body {
     margin-top: 5vh;
     margin-left: auto; margin-right: auto;
     display: block;
-    font-size: 1em;
+    font-size: 3vh;
     padding: 1vh;
     transition-duration: 0.5s;
 }
