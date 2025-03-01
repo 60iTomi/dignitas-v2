@@ -1,0 +1,165 @@
+:root {
+  --primary-colour: #2cbf77ff;
+  --secondary-colour: #031b11ff;
+}
+
+@media (max-width: 90vh) {
+  #header-menu-right.width-variable {
+    display: none;
+  }
+}
+
+@media (min-width: 90vh) {
+  #menuOpen.width-variable {
+    display: none;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.colour-bar {
+  background-color: var(--secondary-colour);
+  height:50vh
+}
+
+.colour-bar .header-column h1 {
+  color: var(--primary-colour);
+  font-size: 5vh;
+  padding-left: 5vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 1000;
+}
+
+.header-columns-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2vh;
+  padding-left: 1vh;
+  padding-right: 5vh;
+}
+
+.header-column a {
+  display:block;
+  color: var(--primary-colour);
+  font-size: 3vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: right;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+
+.header-column a:hover {
+  padding-right: 2vh;
+}
+
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-left: 1vh;
+  padding-right: 5vh;
+}
+
+#menuOpen {
+  font-size: 5vh; 
+  color: var(--primary-colour);
+  cursor: pointer;
+} 
+
+.logo {
+  display: block;
+  width: auto;
+  height: 8.6vh;
+  padding-top: 2vh;
+  margin-bottom: 3vh;
+  fill: var(--primary-colour) !important;
+}
+
+.body-container {
+  color: white;
+  font-family: "Inter", sans-serif;
+  background-color: black;
+  padding-bottom: 2vh;
+}
+
+.body-subcontainer {
+  padding: 0;
+  height: auto;
+}
+
+.body-subcontainer h2 {
+  font-weight: 600;
+  padding-top: 5vh;
+  padding-left: 5vh;
+  font-size: 4vh;
+  margin-top: 0;
+}
+
+.body-subcontainer p {
+  padding-left: 5vh;
+  padding-right: 5vh;
+  font-size: 3vh;
+  font-weight: 400;
+}
+
+.body-container .body-subcontainer .funsies {
+  padding-left: 0 !important;
+}
+
+.body-subcontainer p.funsies {
+  text-align: center;
+  max-width: 80vw;
+  margin-left: auto; margin-right: auto;
+  display: block;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.body-subcontainer span.funsies {
+  padding-top: 5vh;
+  display: block;
+  font-size: 5vh;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.body-subcontainer h2.funsies {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.colour-bar button {
+  color: var(--secondary-colour);
+  background-color: var(--primary-colour) !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  padding: 2vh 3vh 2vh 3vh !important;
+  border: 0.8vh solid var(--primary-colour);
+  border-radius: 5vh;
+  margin-top: 5vh;
+  margin-left: auto; margin-right: auto;
+  display: block;
+  font-size: 3vh;
+  padding: 1vh;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.colour-bar button:hover {
+  padding-left: 5vh !important; padding-right: 5vh !important;
+}
