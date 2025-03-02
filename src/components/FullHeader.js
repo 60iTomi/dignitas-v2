@@ -1,5 +1,28 @@
 export default function FullHeader() {
+    const handleMenuOpen = () => {
+        const menu = document.getElementById('menu');
+        const menuOpen = document.getElementById('menuOpen');
+        menuOpen.classList.add('rotate180');
+        menu.classList.remove('menu-closed');
+        document.body.style.overflow = 'hidden';
+    }
+    const handleMenuClose = () => {
+        const menu = document.getElementById('menu');
+        const menuOpen = document.getElementById('menuOpen');
+        menuOpen.classList.remove('rotate180');
+        menu.classList.add('menu-closed');
+        
+        document.body.style.overflow = 'auto';
+    }
     return (
+      <>
+        <div className="menu-rolldown menu-closed" id="menu">
+            <span className="material-symbols-outlined width-variable" id="menuExit" onClick={handleMenuClose}>close</span>
+            <a href="/map">Térkép</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projektek</a>
+            <a href ="/about">Rólunk</a>
+        </div>
         <div className="colour-bar">
             <div className="top-container">
             <svg className="logo"
@@ -25,7 +48,7 @@ export default function FullHeader() {
       />
     </g>
   </svg>
-                <span className="material-symbols-outlined width-variable" id="menuOpen">menu</span>
+                <span className="material-symbols-outlined width-variable" id="menuOpen" onClick={handleMenuOpen}>keyboard_arrow_down</span>
             </div>
             <div className="header-columns-all">
               <div className="header-column">
@@ -34,16 +57,17 @@ export default function FullHeader() {
                 
               </div>
               <div className="header-column width-variable" id="header-menu-right">
-                <a>Térkép</a>
-                <a>Blog</a>
-                <a>Projektek</a>
-                <a>Rólunk</a>
+                <a href="/map">Térkép</a>
+                <a href="/blog">Blog</a>
+                <a href="/projects">Projektek</a>
+                <a href ="/about">Rólunk</a>
               </div>
             </div>
             <button>Indulás!</button>
             
             
         </div>
+      </>
     )
 }
 

@@ -1,9 +1,10 @@
 import './App.css';
 import './fonts/fonts-inter.css';
 import './fonts/fonts-material.css'
-import FullHeader from './components/Headers';
+import FullHeader from './components/FullHeader';
 import FunFactPane from './components/FunFactPane';
 import BodyText from './components/home/BodyText';
+import ColourDivider from './components/ColourDivider';
 
 function App() {
   const primaries = ["#2cbf77ff", "#8d1313ff", "#3145acff", "#b66fcfff"]
@@ -21,6 +22,7 @@ function App() {
             <FunFactPane symbol="location_on" title="Elkísérünk." body="A térképen könnyen megtalálod a legközelebbi mosdót." />
             <FunFactPane symbol="barcode" title="Minden beléptetőrendszerrel." body="A mosdókba nem csak számsorral, de vonalkódos megoldásokkal is bejuthatsz." />
           </div>
+          <ColourDivider />
          <BodyText title="Hisszük, hogy a higiénia alapjog." body="A Dignitas nonprofit, nyílt forráskódú projektként működik. Nem lopjuk az adataid, nem kémkedünk utánad, és nem is kérünk pénzt az alkalmazás használatáért. Egyszerűen segíteni szeretnénk." />
       </div>
     </>

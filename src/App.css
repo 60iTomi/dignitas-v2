@@ -28,6 +28,9 @@
   #menuOpen.width-variable {
     display: none;
   }
+  .menu-rolldown {
+    display: none;
+  }
   .colour-bar .header-column h1 {
     font-size: 5vh;
   }
@@ -54,9 +57,67 @@ body {
   overflow-y: auto;
 }
 
+.rotate180 {
+  transform: rotate(180deg);
+}
+
 .colour-bar {
   background-color: var(--secondary-colour);
-  height:50vh
+  height:50vh;
+  position: relative;
+}
+
+.menu-rolldown {
+  background-color: var(--secondary-colour);
+  height: 50vh;
+  padding-right: 5vh;
+  right: 0;
+  z-index: 300;
+  position: fixed;
+  width: 100vw;
+  transition-duration: 0.8s;
+}
+
+.menu-closed {
+  transform: translateY(-50vh);
+}
+
+.menu-rolldown a{
+  display: block;
+  color: var(--primary-colour);
+  font-size: 7vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: right;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+
+.menu-rolldown a:hover {
+  padding-right: 2vh;
+}
+
+.menu-rolldown a, .header-column a {
+  text-decoration: none;
+}
+
+#menuExit {
+  display: block;
+  color: var(--primary-colour);
+  font-size: 7vh;
+  height: 8vh;
+  font-weight: 600;
+  text-align: right;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  transition-duration: 0.5s;
+}
+
+#menuExit:hover {
+  font-size: 8vh;
 }
 
 .colour-bar .header-column h1 {
@@ -108,6 +169,7 @@ body {
   font-size: 5vh; 
   color: var(--primary-colour);
   cursor: pointer;
+  transition-duration: 0.3s;
 } 
 
 .logo {
@@ -207,4 +269,18 @@ body {
 
 .colour-bar button:hover {
   padding-left: 5vh !important; padding-right: 5vh !important;
+}
+
+.colour-divider {
+  height: 5vh;
+  background-color: var(--secondary-colour);
+  width: 100vw;
+  display: block;
+  color: var(--primary-colour);
+  fill: var(--primary-colour)
+}
+
+.colour-divider * {
+  color: var(--primary-colour);
+  fill: var(--primary-colour)
 }
