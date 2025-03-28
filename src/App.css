@@ -16,11 +16,14 @@
   .body-container span.funsies {
     font-size: 4vh;
   }
-  .body-subcontainer p {
+  .body-subcontainer p, .body-header-container p {
     font-size: 2vh;
   }
   .body-subcontainer h2 {
     font-size: 4vh;
+  }
+  .body-header-container h1 {
+    font-size: 5vh;
   }
 }
 
@@ -40,11 +43,14 @@
   .body-container span.funsies {
     font-size: 5vh;
   }
-  .body-subcontainer p {
+  .body-subcontainer p, .body-header-container p {
     font-size: 3vh;
   }
   .body-subcontainer h2 {
     font-size: 5vh;
+  }
+  .body-header-container h1 {
+    font-size: 6vh;
   }
 }
 
@@ -96,6 +102,7 @@ body {
 
 .menu-rolldown a:hover {
   padding-right: 2vh;
+  transform: skewX(-10deg);
 }
 
 .menu-rolldown a, .header-column a {
@@ -193,6 +200,18 @@ body {
   height: auto;
 }
 
+.body-header-container {
+  padding: 0;
+  height: auto;
+}
+
+.body-header-container h1 {
+  font-weight: 800;
+  padding-top: 5vh;
+  padding-left: 5vh;
+  margin-top: 0;
+}
+
 .body-subcontainer h2 {
   font-weight: 600;
   padding-top: 5vh;
@@ -200,7 +219,7 @@ body {
   margin-top: 0;
 }
 
-.body-subcontainer p {
+.body-subcontainer p, .body-header-container p {
   padding-left: 5vh;
   padding-right: 5vh;
   font-weight: 400;
@@ -272,15 +291,22 @@ body {
 }
 
 .colour-divider {
-  height: 5vh;
-  background-color: var(--secondary-colour);
+  height: fit-content;
+  background-color: black;
   width: 100vw;
   display: block;
-  color: var(--primary-colour);
-  fill: var(--primary-colour)
+  margin-top: 5vh;
 }
 
-.colour-divider * {
-  color: var(--primary-colour);
-  fill: var(--primary-colour)
+.colour-divider svg {
+  stroke: var(--primary-colour) !important;
+  fill: none;
+  height: 10vh;
+  width: 100vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.colour-bar.compact {
+  height: 13vh;
 }

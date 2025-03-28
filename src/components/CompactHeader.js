@@ -23,7 +23,7 @@ export default function FullHeader() {
             <a href="/projects">Projektek</a>
             <a href ="/about">Rólunk</a>
         </div>
-        <div className="colour-bar">
+        <div className="colour-bar compact">
             <div className="top-container">
             <a href="/"><svg className="logo"
     viewBox="0 0 370.41667 92.604165"
@@ -50,22 +50,6 @@ export default function FullHeader() {
   </svg></a>
                 <span className="material-symbols-outlined width-variable" id="menuOpen" onClick={handleMenuOpen}>keyboard_arrow_down</span>
             </div>
-            <div className="header-columns-all">
-              <div className="header-column">
-                <h1>Méltósággal, közösen.</h1>
-                <h1>2025 óta.</h1>
-                
-              </div>
-              <div className="header-column width-variable" id="header-menu-right">
-                <a href="/map">Térkép</a>
-                <a href="/blog">Blog</a>
-                <a href="/projects">Projektek</a>
-                <a href ="/about">Rólunk</a>
-              </div>
-            </div>
-            <button>Indulás!</button>
-            
-            
         </div>
       </>
     )
