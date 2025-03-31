@@ -1,6 +1,8 @@
 :root {
-  --primary-colour: #3145acff;
+  --primary-colour: white;
   --secondary-colour: #05031bff;
+  --accent-one: #000fe7;
+  --accent-two: #8B1E3F;
 }
 
 @media (max-width: 90vh) {
@@ -68,7 +70,7 @@ body {
 }
 
 .colour-bar {
-  background-color: var(--secondary-colour);
+  background: linear-gradient(to right, var(--accent-one), var(--accent-two));
   height:50vh;
   position: relative;
 }
@@ -254,8 +256,29 @@ body {
 .body-subcontainer h2.funsies {
   text-align: center;
   padding-top: 5vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
 }
 
+.body-subcontainer .title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-subcontainer h2.funsies.special {
+  background: linear-gradient(to right, var(--accent-one), var(--accent-two));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  filter: brightness(1.5)
+} 
+
+.body-subcontainer h2.funsies.special:empty {
+  display: none;
+}
 
 .facts-container {
   display: flex;
@@ -290,7 +313,7 @@ body {
   padding-left: 5vh !important; padding-right: 5vh !important;
 }
 
-.colour-divider {
+.colour-divider-legacy {
   height: fit-content;
   background-color: black;
   width: 100vw;
@@ -298,8 +321,8 @@ body {
   margin-top: 5vh;
 }
 
-.colour-divider svg {
-  stroke: var(--primary-colour) !important;
+.colour-divider-legacy svg {
+  stroke: var(--accent-two) !important;
   fill: none;
   height: 10vh;
   width: 100vw;
@@ -307,6 +330,36 @@ body {
   margin-bottom: 1vh;
 }
 
+.colour-divider {
+  width: 100vw;
+  height: 10px;
+  background: linear-gradient(to right, var(--accent-one), var(--accent-two));
+  display: block;
+}
+
 .colour-bar.compact {
   height: 13vh;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 0vh;
+}
+
+.error-container .random-kaomoji {
+  display: block;
+  margin-left: auto; margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 5vh;
+  font-size: 7vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.error-container .logo {
+  height: 12vh;
 }

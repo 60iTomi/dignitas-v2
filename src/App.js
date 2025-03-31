@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Us
 import './App.css';
 import './fonts/fonts-inter.css';
 import './fonts/fonts-material.css';
-import CompactHeader from './components/CompactHeader';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
+import NotFoundPage from './components/NotFoundPage';
 
 function RandomColour() {
   const primaries = ["#2cbf77ff", "#8d1313ff", "#3145acff", "#b66fcfff"];
@@ -16,19 +16,17 @@ function RandomColour() {
   root.style.setProperty('--secondary-colour', secondaries[randomColorIndex]);
 }
 
+
 function App() {
-  RandomColour();
+  // RandomColour();
 
   return (
     <Router>
       <div className="body-container">
         <Routes>
-          <Route path="/" element={
-            <HomePage />
-          } />
-          <Route path="/about" element={
-            <AboutPage />
-          } />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>
