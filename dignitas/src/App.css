@@ -1,4 +1,4 @@
-.cardHolder {
+#cardHolder {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -9,15 +9,122 @@
   z-index: -10;
 }
 
+.cardBackground.slideUp {
+  transform: translateY(-80%) !important;
+}
+
+.cardUnder.slideUp {
+  transform: translateY(0%) !important;
+}
+
+.cardUnder {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  align-content: end;
+  padding: 0;
+  width: 40vh;
+  height: 80vh;
+  background-color: black;
+  z-index: -2;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0.2, 1.2);
+  overflow: hidden;
+  transform: translateY(-115%);
+  
+}
+
+.cardUnder .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+}
+
+.cardUnder .container .materialIcons {
+  font-size: 8vh;
+  margin-top: 4vh;
+  line-height: 6vh;
+  color: white;
+  display: block;
+  position: relative
+}
+
+.cardUnder .container .boring {
+  color: white;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  }
+
+.cardUnder .container .boring h1 {
+  font-family: 'Nimbus Sans L', sans-serif;
+  font-weight: bold;
+  font-size: 4vh;
+  width: 80%;
+  color: white;
+  margin-left: 3vh;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.cardUnder .container .boring ol {
+  font-family: 'Nimbus Sans L', sans-serif;
+  font-size: 2.3vh;
+  color: white;
+  margin-left: 0vh; margin-right: 3vh;
+  margin-top: 0.5vh;
+  padding-left: 4.5vh;
+}
+
+.cardUnder .container .boring ol li {
+  margin-right: 0vh;
+  margin-left: 0;
+  margin-top: 0.5vh;
+  line-height: 2.4vh;
+  text-align: justify;
+}
+
+.cardUnder .container .boring ul.technical {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0.5vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cardUnder .container .boring ul.technical li::before {
+  content: "> "
+}
+
+.cardUnder .container .boring ul.technical li {
+  font-family: 'Space Mono', sans-serif;
+  font-style: italic;
+  font-size: 1.5vh;
+  color: white;
+  margin-left: 2vh;
+  margin-top: -0.2vh;
+}
+
 .cardBackground {
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   width: 40vh;
   height: 70vh;
   background-color: white;
   z-index: -1;
-  display: block;
   mask-image:
     radial-gradient(circle at left 70%, transparent 2vh, black 2.56vh),
     radial-gradient(circle at right 70%, transparent 2vh, black 2.56vh),
@@ -28,14 +135,8 @@
     radial-gradient(circle at left 70%, transparent 2.5vh, black 2.56vh),
     radial-gradient(circle at right 70%, transparent 2.5vh, black 2.56vh),
     linear-gradient(black, black);
-}
-
-.cardBackground .topLine {
-  position: relative;
-  width: 100%;
-  height: 4vh;
-  background-color: black;
-  border-radius: 20px 20px 0px 0px;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0.2, 1.2);
 }
 
 .cardBackground .header {
@@ -43,14 +144,16 @@
   display: flex;
   align-items: top;
   justify-content: space-between;
-  height: 8vh;
+  height: fit-content;
   width: 100%;
 }
 
 .cardBackground .header .establishmentName {
   position: relative;
-  margin-top: 1vh; margin-bottom: 1vh; margin-left: 2vh; margin-right: 2vh; 
+  margin-top: 1vh; margin-bottom: 0.4vh; margin-left: 2vh; margin-right: 2vh; 
   width: 65%;
+  height: fit-content;
+  display: block;
   text-align: left;
   font-family: 'Nimbus Sans L', sans-serif;
   font-weight: bold;
@@ -78,10 +181,77 @@
 }
 
 .cardBackground .ripHere {
-  position: absolute;
-  top: 61.9%;
+  position: relative;
   border: none;
+  top: 1.6%;
   border-top: 0.4vh dashed #000;
   margin: 2vh 0;
   width: 100%;
 }
+
+#turnHere {
+  transform: rotate(90deg);
+  position: relative;
+  top: 10%;
+  margin: 0;
+  height: 17vh;
+  font-family: 'Nimbus Sans L', sans-serif;
+}
+
+.cardBackground .content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 48%;
+  width: 100%;
+}
+
+.cardBackground .content .text{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 2vh;
+  top: 0;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.cardBackground .content .details {
+  font-family: 'Nimbus Sans L', sans-serif;
+  font-size: 2vh;
+  font-style: italic;
+}
+
+.cardBackground .content .details p {
+  margin: 0;
+  display: block;
+}
+
+.cardBackground .content .instructions {
+  font-family: 'Nimbus Sans L', sans-serif;
+  font-size: 3vh;
+  margin-top: 1vh;
+  display: block;
+  height: fit-content;
+}
+
+.cardBackground .contentBottom {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  top: 2.2%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.cardBackground .contentBottom .code {
+  font-family: 'Space Mono', monospace;
+  font-size: 5vh;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: 1vh 2vh;
+}
+
