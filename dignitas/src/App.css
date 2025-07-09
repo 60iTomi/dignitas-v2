@@ -137,6 +137,11 @@
     linear-gradient(black, black);
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0.2, 0.2, 1.2);
+  transform-origin: 36vh 4vh;
+}
+
+.cardBackground.rotated {
+  transform: rotate(90deg) !important;
 }
 
 .cardBackground .header {
@@ -192,17 +197,22 @@
 #turnHere {
   transform: rotate(90deg);
   position: relative;
-  top: 10%;
+  display: block;
   margin: 0;
-  height: 17vh;
   font-family: 'Nimbus Sans L', sans-serif;
+  right: 0;
+  top: -15%;
+  height: auto;
+  line-height: 3vh;
 }
 
 .cardBackground .content {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 5vh;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content:space-between;
   height: 48%;
   width: 100%;
 }
@@ -213,6 +223,8 @@
   flex-direction: column;
   left: 2vh;
   top: 0;
+  width: auto;
+  max-width: 95%;
   height: 100%;
   justify-content: space-between;
 }

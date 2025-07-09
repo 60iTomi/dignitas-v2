@@ -12,6 +12,11 @@ export default function EntryCard() {
         document.getElementById("pullDown").addEventListener("click", function() {
             cardBackground.classList.remove("slideUp");
             cardUnder.classList.remove("slideUp");});
+        
+        document.getElementById("extras").addEventListener("click", function() {
+            console.log("Before toggle:", cardBackground.classList.contains("rotated"));
+            cardBackground.classList.toggle("rotated");
+            console.log("After toggle:", cardBackground.classList.contains("rotated"));});
   }, []); 
     return <div id="cardHolder">
         <div className="cardUnder">
@@ -36,7 +41,7 @@ export default function EntryCard() {
         <div className="cardBackground">
             <div className="header">
                 <h1 className="establishmentName">KFC Győr, Baross út</h1>
-                <span className="establishmentSymbol">
+                <span className="establishmentSymbol" id="extras">
                     <span className="materialIcons">wc</span>
                 </span>
             </div>
