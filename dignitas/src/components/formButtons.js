@@ -1,11 +1,15 @@
 export function FormButtonNext({ onClick, disabled }) {
     return (
-        <button
+        <div className="buttonLine">
+            <button
+            type="button"
             className="formButtonNext"
             onClick={onClick}
             disabled={disabled}
         >
-            Tovább
+            <span className="materialIcons">arrow_forward</span>
         </button>
+        </div>
+        
     );
 }

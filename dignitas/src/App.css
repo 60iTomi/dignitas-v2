@@ -305,6 +305,7 @@
   width: 100%;
   height: 5%;
   background-color: #F50000;
+  transition-duration: 1s;
 }
 
 .cardReport .container {
@@ -313,6 +314,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative
 }
 
 .cardReport .container h1 {
@@ -326,7 +328,18 @@
   font-size: 5vh;
   color: #000;
 }
+
 .cardReport .container form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardReport .container .options {
   position: relative;
   margin-left: 2vh;
   margin-right: 2vh;
@@ -336,7 +349,7 @@
   width: 90%;
 }
 
-.cardReport .container form .option {
+.cardReport .container .options .option {
   font-family: 'Space Mono', sans-serif;
   line-height: 3vh;
   display: block;
@@ -357,7 +370,7 @@
   padding-top: 1vh; padding-bottom: 1vh;
 }
 
-.cardReport .container form .option.selected {
+.cardReport .container .options .option.selected {
   background-color: #F50000;
   margin-left: 1vh;
   color: white;
@@ -372,16 +385,46 @@
   width: 0;
 }
 
+.formButtonNext {
+  position: relative;
+  display: block;
+  right: 0;
+  background-color: #F50000;
+  color: white;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: bold;
+  font-size: 3vh;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 2vh;
+  cursor: pointer;
+  border: none;
+}
 
+.cardReport .buttonLine {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+}
+
+.formButtonNext .materialIcons {
+  font-size: 6vh;
+  padding-bottom: 6vh;
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+}
+
+.cardBackground .header .establishmentSymbol.successful, .cardReport .topBar.successful {
+  background-color: #128745 !important;
+}
 
 @media screen and (max-width: 55vh) {
   .cardReport {
-    left: 2vh;
-    width: 55vh !important;
-  }
-  .cardReport .container {
-    max-width: 85vw;
-    background-color: #004BA8;
+    max-width: 90vw !important;
   }
 
   .cardReport .container form .option {
