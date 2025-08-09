@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "netlify": "^22.2.2"
+    "create-next-app": "^15.4.6"
   }
 }
